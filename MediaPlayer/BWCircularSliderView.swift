@@ -13,7 +13,7 @@ import UIKit
     @IBInspectable var startColor:UIColor = UIColor.yellowColor()
     @IBInspectable var endColor:UIColor = UIColor.blueColor()
     
-    var angles: Int = 0
+    var angles: Int = 50
     #if TARGET_INTERFACE_BUILDER
     override func willMoveToSuperview(newSuperview: UIView?) {
         

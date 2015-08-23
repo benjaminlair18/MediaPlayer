@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+
+
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -15,13 +19,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet var table: UITableView!
     
+    let ins = AKInstrument()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
+        ins.setAudioOutput(AKOscillator())
+        AKOrchestra.addInstrument(ins)
+        ins.play()
+        
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        ins.stop()
+        
     }
 
     override func didReceiveMemoryWarning() {
