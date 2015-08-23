@@ -17,6 +17,10 @@ class MediaPlayerViewController: UIViewController {
     var player: AVAudioPlayer = AVAudioPlayer()
     
     
+    @IBOutlet var slider3: BWCircularSliderView!
+    
+
+    
     var timer:NSTimer!
     
     @IBOutlet var Image: UIImageView!
@@ -24,6 +28,8 @@ class MediaPlayerViewController: UIViewController {
     @IBAction func pauseButton(sender: UIBarButtonItem)
     {
         player.pause()
+        
+    
         
     }
     
@@ -46,7 +52,7 @@ class MediaPlayerViewController: UIViewController {
     
     @IBAction func sliderController(sender: UISlider)
     {
-        player.volume = slider.value
+       // player.volume = Float(Float(slider3.angles) / 100)
         
         
     }
@@ -104,7 +110,7 @@ class MediaPlayerViewController: UIViewController {
     
     func ticker(theTimer:NSTimer)
     {
-    
+    player.volume = Float(Float(slider3.angles) / 100)
     
         self.slider2.value = Float(player.currentTime)
         self.Ctime.text = stringFromTimeInterval(player.currentTime)

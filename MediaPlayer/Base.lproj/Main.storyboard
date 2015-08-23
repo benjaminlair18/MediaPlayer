@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJG-6Z-0Ra">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="pause" id="aDL-aA-N9o">
                                         <connections>
@@ -89,26 +89,37 @@
                                             <action selector="plsyButton:" destination="yg1-Vt-zib" id="Kur-Wo-586"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" id="LwT-lS-RAv">
+                                        <view key="customView" contentMode="scaleToFill" id="xUV-yE-23z" customClass="BWCircularSliderView" customModule="MediaPlayer" customModuleProvider="target">
+                                            <rect key="frame" x="41" y="434" width="311" height="334"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-04-Qff">
-                                <rect key="frame" x="23" y="560" width="270" height="31"/>
+                                <rect key="frame" x="14" y="119" width="270" height="31"/>
                                 <connections>
                                     <action selector="slider2Controll:forEvent:" destination="yg1-Vt-zib" eventType="valueChanged" id="KBj-zp-4cN"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Length:         " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQe-HU-oij">
-                                <rect key="frame" x="71" y="494" width="261" height="21"/>
+                                <rect key="frame" x="57" y="187" width="261" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.9725720240945962" green="0.96719208620957253" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AX-gR-50J">
-                                <rect key="frame" x="305" y="564" width="62" height="21"/>
+                                <rect key="frame" x="307" y="123" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-5L-Xxi" customClass="BWCircularSliderView" customModule="MediaPlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="501" width="375" height="330"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -119,6 +130,7 @@
                         <outlet property="Time" destination="QQe-HU-oij" id="tbs-4h-1ci"/>
                         <outlet property="slider" destination="9kh-YO-Bwx" id="Zrc-Bw-sfT"/>
                         <outlet property="slider2" destination="IO1-04-Qff" id="1BQ-Hd-jRm"/>
+                        <outlet property="slider3" destination="wCU-5L-Xxi" id="cW4-SH-W3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94m-F0-N1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
