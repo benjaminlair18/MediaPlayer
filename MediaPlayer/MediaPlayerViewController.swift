@@ -52,7 +52,7 @@ class MediaPlayerViewController: UIViewController {
     
     @IBAction func sliderController(sender: UISlider)
     {
-       // player.volume = Float(Float(slider3.angles) / 100)
+        player.volume = slider.value
         
         
     }
