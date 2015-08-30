@@ -33,16 +33,18 @@ class ProfileViewController: UIViewController {
         gravatarHashLink = "http://www.gravatar.com/avatar/" + emailField.text.md5() + "?s=128"
         let checkedUrl = NSURL(string: gravatarHashLink)!
         var asyncgetter = AsyncImageGetter()
-        asyncgetter.downloadImage(checkedUrl, imageView: imageView)
+        asyncgetter.downloadImage(checkedUrl, callback: { data in
+            self.imageView.image = UIImage(data: data!)
+            self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+            self.imageView.clipsToBounds = true
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
+        
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

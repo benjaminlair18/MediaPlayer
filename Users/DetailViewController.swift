@@ -55,7 +55,11 @@ class DetailViewController: UIViewController {
                 if let checkedUrl = NSURL(string: imgLink) {
 
                     var asyncgetter = AsyncImageGetter()
-                    asyncgetter.downloadImage(checkedUrl, imageView: imageView)
+                    asyncgetter.downloadImage(checkedUrl, callback: { data in
+                        self.imageView.image = UIImage(data: data!)
+                        self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+                        self.imageView.clipsToBounds = true
+                    })
                 }
 
             }

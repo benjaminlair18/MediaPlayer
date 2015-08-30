@@ -181,7 +181,7 @@
                                 <action selector="logoutAction:" destination="ofL-MU-aVX" id="Jka-La-eQU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Profile" id="dra-aq-lZz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="dra-aq-lZz">
                             <connections>
                                 <segue destination="vGg-pm-Tt6" kind="show" id="DAb-qp-SUz"/>
                             </connections>

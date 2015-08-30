@@ -17,14 +17,13 @@ class AsyncImageGetter{
             }.resume()
     }
     
-    func downloadImage(url:NSURL, imageView: UIImageView){
+    func downloadImage(url:NSURL, callback: ((data: NSData?) -> Void)){
         println("Started downloading \"\(url.lastPathComponent!.stringByDeletingPathExtension)\".")
         getDataFromUrl(url) { data in
             dispatch_async(dispatch_get_main_queue()) {
                 println("Finished downloading \"\(url.lastPathComponent!.stringByDeletingPathExtension)\".")
-                imageView.image = UIImage(data: data!)
-                imageView.contentMode = UIViewContentMode.ScaleAspectFill
-                imageView.clipsToBounds = true
+                
+                callback(data: data)
             }
         }
     }

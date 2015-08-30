@@ -89,6 +89,19 @@ class WelcomeViewController: PFQueryTableViewController {
         super.viewDidLoad()
         
         if currentUser != nil {
+            if let email = currentUser?.email{
+                let gravatarHashLink = "http://www.gravatar.com/avatar/" + email.md5() + "?s=18"
+                let checkedUrl = NSURL(string: gravatarHashLink)!
+                var asyncgetter = AsyncImageGetter()
+                asyncgetter.downloadImage(checkedUrl, callback: { data in
+                    let image = UIImage(data: data!)
+                    let imageView = UIImageView(image:image)
+                    imageView.contentMode = UIViewContentMode.ScaleAspectFill
+                    imageView.clipsToBounds = true
+                    self.navigationItem.titleView = imageView
+                })
+            }
+            
 //            let instrument = AKInstrument()
 //            instrument.setAudioOutput(AKOscillator())
 //            AKOrchestra.addInstrument(instrument)
