@@ -292,20 +292,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wch-KK-sCa">
-                                <rect key="frame" x="16" y="79" width="568" height="30"/>
+                                <rect key="frame" x="16" y="191" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wcw-oV-Ogt">
-                                <rect key="frame" x="16" y="117" width="568" height="30"/>
+                                <rect key="frame" x="16" y="229" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PjA-Bx-GEh">
-                                <rect key="frame" x="16" y="155" width="568" height="30"/>
+                                <rect key="frame" x="16" y="267" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtV-hC-INk">
+                                <rect key="frame" x="236" y="72" width="128" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -313,6 +316,7 @@
                             <constraint firstItem="Wcw-oV-Ogt" firstAttribute="leading" secondItem="qVP-T5-x5T" secondAttribute="leadingMargin" id="D0V-PL-OA1"/>
                             <constraint firstItem="Wcw-oV-Ogt" firstAttribute="trailing" secondItem="qVP-T5-x5T" secondAttribute="trailingMargin" id="Gpl-zu-BGm"/>
                             <constraint firstItem="Wcw-oV-Ogt" firstAttribute="trailing" secondItem="qVP-T5-x5T" secondAttribute="trailingMargin" id="Iyp-gq-aUp"/>
+                            <constraint firstAttribute="centerX" secondItem="ZtV-hC-INk" secondAttribute="centerX" id="bhD-qH-3wJ"/>
                             <constraint firstItem="PjA-Bx-GEh" firstAttribute="trailing" secondItem="qVP-T5-x5T" secondAttribute="trailingMargin" id="ebv-Yp-gxF"/>
                             <constraint firstItem="PjA-Bx-GEh" firstAttribute="leading" secondItem="qVP-T5-x5T" secondAttribute="leadingMargin" id="wtC-9G-I8l"/>
                             <constraint firstItem="wch-KK-sCa" firstAttribute="trailing" secondItem="qVP-T5-x5T" secondAttribute="trailingMargin" id="wy2-Tb-lnE"/>
@@ -328,6 +332,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="Wcw-oV-Ogt" id="Sb3-2X-dU6"/>
+                        <outlet property="imageView" destination="ZtV-hC-INk" id="dKQ-Jp-3ep"/>
                         <outlet property="nameField" destination="wch-KK-sCa" id="QqK-hu-PSZ"/>
                         <outlet property="passField" destination="PjA-Bx-GEh" id="jp7-ZR-GmH"/>
                     </connections>

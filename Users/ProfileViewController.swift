@@ -13,6 +13,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    var gravatarHashLink: String = ""
     
     @IBAction func saveAction(sender: AnyObject) {
         PFUser.currentUser()?.username = nameField.text
@@ -28,6 +30,10 @@ class ProfileViewController: UIViewController {
         nameField.text = PFUser.currentUser()?.username
         emailField.text = PFUser.currentUser()?.email
         // Do any additional setup after loading the view.
+        gravatarHashLink = "http://www.gravatar.com/avatar/" + emailField.text.md5() + "?s=128"
+        let checkedUrl = NSURL(string: gravatarHashLink)!
+        var asyncgetter = AsyncImageGetter()
+        asyncgetter.downloadImage(checkedUrl, imageView: imageView)
     }
 
     override func didReceiveMemoryWarning() {

@@ -53,7 +53,9 @@ class DetailViewController: UIViewController {
                 // Download image in an async method
                 imageView.contentMode = UIViewContentMode.ScaleAspectFit
                 if let checkedUrl = NSURL(string: imgLink) {
-                    downloadImage(checkedUrl)
+
+                    var asyncgetter = AsyncImageGetter()
+                    asyncgetter.downloadImage(checkedUrl, imageView: imageView)
                 }
 
             }
@@ -69,24 +71,6 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getDataFromUrl(urL:NSURL, completion: ((data: NSData?) -> Void)) {
-        NSURLSession.sharedSession().dataTaskWithURL(urL) { (data, response, error) in
-            completion(data: data)
-            }.resume()
-    }
-    
-    func downloadImage(url:NSURL){
-        println("Started downloading \"\(url.lastPathComponent!.stringByDeletingPathExtension)\".")
-        getDataFromUrl(url) { data in
-            dispatch_async(dispatch_get_main_queue()) {
-                println("Finished downloading \"\(url.lastPathComponent!.stringByDeletingPathExtension)\".")
-                self.imageView.image = UIImage(data: data!)
-                self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
-                self.imageView.clipsToBounds = true
-            }
-        }
     }
     
     override func viewDidAppear(animated: Bool) {

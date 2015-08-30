@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8430AC931B92C3970051470D /* String+md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430AC921B92C3970051470D /* String+md5.swift */; };
+		8430AC971B92D0850051470D /* AsyncImageGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430AC961B92D0850051470D /* AsyncImageGetter.swift */; };
 		8486E90F1B90540300F42350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E90E1B90540300F42350 /* AppDelegate.swift */; };
 		8486E9111B90540300F42350 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E9101B90540300F42350 /* ViewController.swift */; };
 		8486E9141B90540300F42350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8486E9121B90540300F42350 /* Main.storyboard */; };
@@ -75,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8430AC921B92C3970051470D /* String+md5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+md5.swift"; sourceTree = "<group>"; };
+		8430AC951B92CEC70051470D /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		8430AC961B92D0850051470D /* AsyncImageGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageGetter.swift; sourceTree = "<group>"; };
 		8486E9091B90540300F42350 /* Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Users.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8486E90D1B90540300F42350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8486E90E1B90540300F42350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +111,6 @@
 		8486E95B1B90BA0600F42350 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8486E95F1B916F1200F42350 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = "../AudioKit-master/AudioKit.xcodeproj"; sourceTree = "<group>"; };
 		8486E9781B91A58300F42350 /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioKit.swift; path = "../../AudioKit-master/AudioKit/Platforms/Swift/AudioKit.swift"; sourceTree = "<group>"; };
-		8486E97A1B91A5BE00F42350 /* AudioKit-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioKit-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +170,7 @@
 		8486E90B1B90540300F42350 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				8486E97A1B91A5BE00F42350 /* AudioKit-Bridging-Header.h */,
+				8430AC951B92CEC70051470D /* Bridging-Header.h */,
 				8486E9781B91A58300F42350 /* AudioKit.swift */,
 				8486E90E1B90540300F42350 /* AppDelegate.swift */,
 				8486E9101B90540300F42350 /* ViewController.swift */,
@@ -174,6 +178,8 @@
 				8486E94F1B905FAB00F42350 /* WelcomeViewController.swift */,
 				8486E9551B9092BA00F42350 /* ProfileViewController.swift */,
 				8486E95B1B90BA0600F42350 /* DetailViewController.swift */,
+				8430AC921B92C3970051470D /* String+md5.swift */,
+				8430AC961B92D0850051470D /* AsyncImageGetter.swift */,
 				8486E9121B90540300F42350 /* Main.storyboard */,
 				8486E9151B90540300F42350 /* Images.xcassets */,
 				8486E9171B90540300F42350 /* LaunchScreen.xib */,
@@ -373,8 +379,10 @@
 				8486E9561B9092BA00F42350 /* ProfileViewController.swift in Sources */,
 				8486E9541B9088B500F42350 /* RegisterViewController.swift in Sources */,
 				8486E9501B905FAB00F42350 /* WelcomeViewController.swift in Sources */,
+				8430AC931B92C3970051470D /* String+md5.swift in Sources */,
 				8486E9111B90540300F42350 /* ViewController.swift in Sources */,
 				8486E9791B91A58300F42350 /* AudioKit.swift in Sources */,
+				8430AC971B92D0850051470D /* AsyncImageGetter.swift in Sources */,
 				8486E90F1B90540300F42350 /* AppDelegate.swift in Sources */,
 				8486E95C1B90BA0600F42350 /* DetailViewController.swift in Sources */,
 			);
@@ -519,7 +527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Users/AudioKit-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Users/Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "../AudioKit-master/AudioKit/**";
 			};
 			name = Debug;
@@ -537,7 +545,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Users/AudioKit-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Users/Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "../AudioKit-master/AudioKit/**";
 			};
 			name = Release;
