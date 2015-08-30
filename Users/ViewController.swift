@@ -15,11 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var passtext: UITextField!
     @IBOutlet weak var registerbtn: UIButton!
     @IBOutlet weak var loginbtn: UIButton!
-
-    @IBAction func logoutSegue(sender: UIStoryboardSegue) {
-//        let sourceViewController = sender.sourceViewController
-        
-    }
     
     @IBAction func login(sender: AnyObject) {
         loginToParse(usertext.text, pass: passtext.text)

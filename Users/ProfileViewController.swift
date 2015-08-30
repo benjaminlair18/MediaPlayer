@@ -19,7 +19,8 @@ class ProfileViewController: UIViewController {
         PFUser.currentUser()?.email = emailField.text
         PFUser.currentUser()?.password = passField.text
         PFUser.currentUser()?.saveInBackground()
-        self.performSegueWithIdentifier("unwindToWelcome", sender: self)
+//        self.performSegueWithIdentifier("unwindToWelcome", sender: self)
+        self.navigationController?.popViewControllerAnimated(true)
     }
         
     override func viewDidLoad() {

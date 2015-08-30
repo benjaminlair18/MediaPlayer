@@ -17,11 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-Ch-6AO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-Ch-6AO">
                                 <rect key="frame" x="16" y="156" width="568" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="568" id="Tfz-fj-Ecd"/>
-                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,7 +44,7 @@
                                     <action selector="registerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J88-wl-nvh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-s9-Umh">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-s9-Umh">
                                 <rect key="frame" x="16" y="211" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -55,14 +52,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sDZ-YO-Ueo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9qd-1j-noX"/>
-                            <constraint firstItem="HPl-s9-Umh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WRi-bL-8Z7"/>
-                            <constraint firstItem="ZJZ-It-3yt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cED-gm-DtY"/>
-                            <constraint firstItem="HPl-s9-Umh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dS3-Ih-pOd"/>
-                            <constraint firstItem="ZJZ-It-3yt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mrt-Vl-mw8"/>
-                            <constraint firstItem="sDZ-YO-Ueo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ucZ-HB-ZKw"/>
-                            <constraint firstItem="e5b-Ch-6AO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ufY-hv-FJ0"/>
-                            <constraint firstItem="e5b-Ch-6AO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wSK-BI-rwD"/>
+                            <constraint firstItem="e5b-Ch-6AO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0T8-pU-IFO"/>
+                            <constraint firstItem="HPl-s9-Umh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6uj-TX-nO2"/>
+                            <constraint firstItem="ZJZ-It-3yt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Kt-jk-XMe"/>
+                            <constraint firstItem="HPl-s9-Umh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cc5-sa-dkl"/>
+                            <constraint firstItem="sDZ-YO-Ueo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jb7-gO-FLn"/>
+                            <constraint firstItem="sDZ-YO-Ueo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SBh-71-C9w"/>
+                            <constraint firstItem="e5b-Ch-6AO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zjm-lP-lpi"/>
+                            <constraint firstItem="ZJZ-It-3yt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jQi-D7-fMQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zcU-2I-8ad"/>
@@ -325,7 +322,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="0HL-OK-sTL">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="K4c-IU-ZvW">
                             <connections>
-                                <action selector="saveAction:" destination="vGg-pm-Tt6" id="RWx-LS-whC"/>
+                                <action selector="saveAction:" destination="vGg-pm-Tt6" id="2XI-ob-gIN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -333,11 +330,9 @@
                         <outlet property="emailField" destination="Wcw-oV-Ogt" id="Sb3-2X-dU6"/>
                         <outlet property="nameField" destination="wch-KK-sCa" id="QqK-hu-PSZ"/>
                         <outlet property="passField" destination="PjA-Bx-GEh" id="jp7-ZR-GmH"/>
-                        <segue destination="563-xh-oMH" kind="unwind" identifier="unwindToWelcome" unwindAction="unwindToWelcome:" id="t0N-Ge-5aL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRD-ug-mqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="563-xh-oMH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2671" y="399"/>
         </scene>

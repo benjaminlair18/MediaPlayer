@@ -46,16 +46,22 @@ class DetailViewController: UIViewController {
             artistView.text = object["artist"] as? String
             albumView.text = object["album"] as? String
             link = object["link"] as! String
-            imgLink = object["image"] as! String
+            
+            imgLink = ""
+            if object["image"] != nil{
+                imgLink = object["image"] as! String
+                // Download image in an async method
+                imageView.contentMode = UIViewContentMode.ScaleAspectFit
+                if let checkedUrl = NSURL(string: imgLink) {
+                    downloadImage(checkedUrl)
+                }
+
+            }
+            
             player = AVPlayer(URL: NSURL(string: link))
             playBtn(self)
             
-            // Download image in an async method
-            imageView.contentMode = UIViewContentMode.ScaleAspectFit
-            if let checkedUrl = NSURL(string: imgLink) {
-                downloadImage(checkedUrl)
-            }
-
+            
 
         }
     }

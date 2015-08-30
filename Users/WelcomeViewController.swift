@@ -20,14 +20,12 @@ import ParseUI
 class WelcomeViewController: PFQueryTableViewController {
     var currentUser = PFUser.currentUser()
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
-    
-    @IBAction func unwindToWelcome(segue: UIStoryboardSegue){
-    }
+
     
     @IBAction func logoutAction(sender: AnyObject) {
         PFUser.logOut()
         currentUser = PFUser.currentUser() // this will now be nil
-        self.performSegueWithIdentifier("logoutSegue", sender: self)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     // Initialise the PFQueryTable tableview
